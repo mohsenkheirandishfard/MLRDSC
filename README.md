@@ -4,7 +4,7 @@ This is a Pytorch implementation of "Multi-Level Representation Learning for Dee
 ## Citation
 If you use this code in your research, please cite our paper.
 ```
-@inproceedings{kheirandishfard2018convex,
+@inproceedings{kheirandishfard2018Multi,
   title={Multi-Level Representation Learning for Deep Subspace Clustering},
   author={Kheirandishfard, Mohsen and Zohrizadeh, Fariba and Kamangar, Farhad},
   booktitle={2020 IEEE Winter Conference on Applications of Computer Vision (WACV)},
