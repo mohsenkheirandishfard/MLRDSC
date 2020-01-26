@@ -7,7 +7,6 @@ model:
   kernelSize: [5, 3, 3]
   numHidden:  [10, 20, 30]
   input_size: [42, 48]
-  post_proc:  [10, 2]
   preTrainedModel: "./pretrained-EYaleB/preTrained38Subjs.pt" # pre-trained model on 38 subjects
 
 training:
