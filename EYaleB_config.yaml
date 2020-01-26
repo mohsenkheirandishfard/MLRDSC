@@ -13,7 +13,7 @@ model:
 training:
   seedFlag:   True
   seedValue:  1
-  lambdas:    [40., 10., 100.] # lambda_1, lambda_2, lambda_3
+  lambdas:    [100., 40., 10.] # lambda_1, lambda_2, lambda_3
   lr:         1.0e-3 # learning rate
   cte:        1.0e-4 # convergence criteria
   numEpochs:  1000 # number of epochs

@@ -137,11 +137,11 @@ def subspaceClusteringMLRDSC(images, params):
     for epoch in range(numEpochs + 1):
         Z3, Y3, Z2, Y2, Z1, Y1, C, D1, D2, D3, output = CAE(X)
 
-        regLoss = lambda1 * torch.norm(torch.mm(torch.transpose(Q, 1, 0), torch.abs(C)), p=1) + \
-                  lambda2 * (torch.norm(D1, p=2) ** 2 + torch.norm(D2, p=2) ** 2 + torch.norm(D3, p=2) ** 2)
+        regLoss = lambda2 * torch.norm(torch.mm(torch.transpose(Q, 1, 0), torch.abs(C)), p=1) + \
+                  lambda3 * (torch.norm(D1, p=2) ** 2 + torch.norm(D2, p=2) ** 2 + torch.norm(D3, p=2) ** 2)
 
         reconLoss = torch.sum((output - X) ** 2)
-        expLoss = lambda3 * (torch.sum((Z3 - Y3) ** 2) + torch.sum((Z2 - Y2) ** 2) + torch.sum((Z1 - Y1) ** 2))
+        expLoss = lambda1 * (torch.sum((Z3 - Y3) ** 2) + torch.sum((Z2 - Y2) ** 2) + torch.sum((Z1 - Y1) ** 2))
         loss = reconLoss + regLoss + regparams * expLoss
 
         optimizer.zero_grad()
